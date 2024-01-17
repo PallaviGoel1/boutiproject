@@ -6,7 +6,6 @@ from django.conf import settings
 
 from products.models import Product
 
-# Create your models here.
 
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
@@ -54,6 +53,7 @@ class Order(models.Model):
 
     def __str__(self):
         return self.order_number
+
 
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
