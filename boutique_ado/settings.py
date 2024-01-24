@@ -141,7 +141,7 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-
+    
 #DATABASES = {
 #    'default': dj_database_url.parse('postgres://vrofanmx:Gd4txRhHMzg4m5cByjiZcRJQ3VOBcmCj@manny.db.elephantsql.com/vrofanmx'),
 #}
