@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['bproject.herokuapp.com', 'localhost']
 #ALLOWED_HOSTS = ['8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
-#CSRF_TRUSTED_ORIGINS = ['https://8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
 
 
 
