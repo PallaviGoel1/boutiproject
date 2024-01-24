@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
+
+if os.path.exists("env.py"):
+    import env # noqa
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,8 +29,9 @@ SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+r0lm(3%_9hr7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
-CSRF_TRUSTED_ORIGINS = ['https://8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['bproject.herokuapp.com', 'localhost']
+#ALLOWED_HOSTS = ['8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
+#CSRF_TRUSTED_ORIGINS = ['https://8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
 
 
 
@@ -124,12 +129,21 @@ WSGI_APPLICATION = 'boutique_ado.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+#DATABASES = {
+#    'default': dj_database_url.parse('postgres://vrofanmx:Gd4txRhHMzg4m5cByjiZcRJQ3VOBcmCj@manny.db.elephantsql.com/vrofanmx'),
+#}
 
 
 # Password validation
