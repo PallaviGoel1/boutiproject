@@ -30,8 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = 'DEVELOPMENT' in os.environ
 #DEBUG = False
 
-#ALLOWED_HOSTS = ['bproject-a02974c4fb13.herokuapp.com', 'localhost']
-ALLOWED_HOSTS = ['8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['bproject-a02974c4fb13.herokuapp.com', 'localhost']
+#ALLOWED_HOSTS = ['8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
 CSRF_TRUSTED_ORIGINS = ['https://8000-pallavigoel-boutiprojec-fqu5ugdfzl6.ws-eu107.gitpod.io']
 
 
@@ -178,7 +178,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
