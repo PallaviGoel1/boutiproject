@@ -8,4 +8,4 @@ os.environ["DATABASE_URL"] = "postgres://vrofanmx:Gd4txRhHMzg4m5cByjiZcRJQ3VOBcm
 os.environ["STRIPE_PUBLIC_KEY"] = "pk_test_51OZVcdKjqt1ZoBTg3rmOzIfb7psOjnlRY2jiG4MGBa881RS3bdGyciwt6sl3LvfGIrev166baXuN1EhH"
 os.environ["STRIPE_SECRET_KEY"] = "sk_test_51OZVcdKjqt1ZoBTgGu3ZLwzdo7iix5G7s9zCTG4zGhaKnCWIrIRB5GyqtQywqhDefZhcPWEUTkY0"
 os.environ["STRIPE_WH_SECRET"] = "whsec_Vgi5j0qZBgvweZM63m0kSyQyZTlk6Gjr"
-os.environ["AWS_DEFAULT_ACL"] = "None"
+#os.environ["AWS_DEFAULT_ACL"] = "None"
